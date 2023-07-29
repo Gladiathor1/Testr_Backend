@@ -1,0 +1,17 @@
+
+sudo apt update
+sudo apt upgrade
+vi ~/.bashrc
+alias python=python3
+source ~/.bashrc
+sudo apt install pip
+# MySQL
+sudo apt install mysql-server-8.0
+sudo apt-get install libmysqlclient-dev
+sudo mysql_secure_installation
+Root Password: @testrMySQL8
+# Create DB and User
+CREATE DATABASE testrdev;
+CREATE USER 'devuser'@'localhost' IDENTIFIED BY 'dev@local';
+GRANT ALL PRIVILEGES ON testrdev. * TO 'devuser'@'localhost';
+FLUSH PRIVILEGES;
